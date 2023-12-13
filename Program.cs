@@ -87,7 +87,7 @@ while (true)
 
 
                 Console.WriteLine("Saindo do programa...");
-                int tempoEmMilissegundos = 60000; // Define o tempo em milissegundos (por exemplo, 60 segundos)
+                int tempoEmMilissegundos = 60000; 
 
                 Console.WriteLine($"O programa será encerrado em {tempoEmMilissegundos / 1000} segundos.");
 
@@ -96,11 +96,10 @@ while (true)
                 Console.WriteLine("Pressione qualquer tecla para sair antes do tempo terminar...");
                 Console.ReadKey();
 
-                // Cancela o timer se o usuário pressionar uma tecla antes do tempo acabar
                 timer.Change(Timeout.Infinite, Timeout.Infinite);
                 Console.WriteLine("Programa encerrado manualmente.");
 
-                // Aguarda a tecla final para fechar o console
+       
                 Console.ReadKey();
             }
 
@@ -113,5 +112,5 @@ while (true)
 static void EncerrarPrograma(object state)
 {
     Console.WriteLine("Tempo esgotado. Encerrando o programa...");
-    Environment.Exit(0); // Encerra o programa
+    Environment.Exit(0);
 }
